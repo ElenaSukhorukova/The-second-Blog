@@ -1,6 +1,6 @@
 <h1> Contacts </h1>
 
-<%= form_for :contact, method: :post, url: '/contacts/create' do |f| %>
+<%= form_for :contact, url: contacts_path do |f| %>
 	
 	<p>
 		<%= f.label :name %><br />
@@ -18,7 +18,7 @@
 	</p>
 
 	<p>
-		<%= f.submit %>
+		<%= f.submit 'Send message' %>
 	</p>
 
 <% end %>
