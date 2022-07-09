@@ -2,11 +2,10 @@ class ArticlesController < ApplicationController
   
   def index
     @articles = Article.all
-    render :index
   end
 
   def show
-    @art = Article.find(id: params[:id])
+    @article = Article.find(params[:id])
   end
 
   def new
@@ -17,9 +16,17 @@ class ArticlesController < ApplicationController
     
     if @article.valid?
       @article.save
+      redirect_to @article
     else
       render action: "new"
     end
+  end
+
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
   end
 
   private
