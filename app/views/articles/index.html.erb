@@ -1,5 +1,9 @@
 <h2>Our articles </h2>
 <p>
+	<%= link_to "New article", new_article_path %>
+</p>
+<hr />
+<p>
 	<% @articles.each do |art| %>
 		<p>
 			<%= link_to art.title, controller: "articles", action: "show", id: art.id %><br /><br />
