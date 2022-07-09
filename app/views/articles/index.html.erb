@@ -1,0 +1,9 @@
+<h2>Our articles </h2>
+<p>
+	<% @articles.each do |art| %>
+		<p>
+			<%= link_to art.title, controller: "articles", action: "show", id: art.id %><br /><br />
+			<%= art.text %>
+		</p>
+	<% end %>
+</p>

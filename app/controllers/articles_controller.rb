@@ -1,5 +1,14 @@
 class ArticlesController < ApplicationController
- 
+  
+  def index
+    @articles = Article.all
+    render :index
+  end
+
+  def show
+    @art = Article.find(id: params[:id])
+  end
+
   def new
   end
 
