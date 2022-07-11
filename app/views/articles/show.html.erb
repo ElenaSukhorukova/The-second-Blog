@@ -2,6 +2,21 @@
 <h3><%= @article.title %></h3>
 <p><%= @article.text %></p>
 
+<%= form_for([@article, @article.comments.build]) do |f| %>
+	<p>
+		<%= f.label :author %><br /><br />
+		<%= f.text_field :author %>
+	</p>
+	<p>
+		<%= f.label :body %><br /><br />
+		<%= f.text_area :body %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>
+
 <p>
 	<%= link_to "Return by all articles", articles_path %>
 </p>
+
