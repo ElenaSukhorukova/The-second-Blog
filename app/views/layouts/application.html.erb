@@ -11,6 +11,10 @@
   </head>
 
   <body>
+    
+    <%= link_to 'Sign in', new_user_session_url %> | 
+    <%= link_to 'Sign out', destroy_user_session_url, data: { 'turbo-method': :delete, 'turbo-confirm': 'Are you sure?' } %>
+
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>       
