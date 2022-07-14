@@ -7,12 +7,29 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+
+
+<div class="container py-3">
+  <header>
+    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <span class="fs-4">My Blog</span>
+      </a>
+
+      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+        <a class="me-3 py-2 text-dark text-decoration-none" href="#">About us</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="#">Articles</a>
+        <a class="me-3 py-2 text-dark text-decoration-none" href="#">Contacts</a>
+      </nav>
+    </div>
+
     <% if user_signed_in? %>
-        <%= link_to 'Sign out', destroy_user_session_url, data: { 'turbo-method': :delete, 'turbo-confirm': 'Are you sure?' } %>
+        Hello, <%= current_user.email %> | <%= link_to 'Sign out', destroy_user_session_url, data: { 'turbo-method': :delete, 'turbo-confirm': 'Are you sure?' } %>
     <% else %>
         <%= link_to 'Sign in', new_user_session_url %> | 
         <%= link_to 'Sign up', new_user_registration_url %>
