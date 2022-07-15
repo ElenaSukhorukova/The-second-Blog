@@ -29,7 +29,7 @@
     </div>
 
     <% if user_signed_in? %>
-        Hello, <%= current_user.email %> | <%= link_to 'Sign out', destroy_user_session_url, data: { 'turbo-method': :delete, 'turbo-confirm': 'Are you sure?' } %>
+        Hello, <%= current_user.username.capitalize %> | <%= link_to 'Sign out', destroy_user_session_url, data: { 'turbo-method': :delete, 'turbo-confirm': 'Are you sure?' } %>
     <% else %>
         <%= link_to 'Sign in', new_user_session_url %> | 
         <%= link_to 'Sign up', new_user_registration_url %>
