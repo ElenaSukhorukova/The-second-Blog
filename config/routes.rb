@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'home', to: 'home#index'
   root to: "home#index"
+  get 'pages/about'
 
   get 'terms' => 'pages#terms'
   get 'about' => 'pages#about'

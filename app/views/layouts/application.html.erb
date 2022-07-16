@@ -13,18 +13,17 @@
 
   <body>
 
+  <div class="container py-3">
+    <header>
+      <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+          <span class="fs-4">My Blog</span>
+        </a>
 
-<div class="container py-3">
-  <header>
-    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-        <span class="fs-4">My Blog</span>
-      </a>
-
-      <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-        <a class="me-3 py-2 text-dark text-decoration-none" href="#">About us</a>
-        <a class="me-3 py-2 text-dark text-decoration-none" href="#">Articles</a>
-        <a class="me-3 py-2 text-dark text-decoration-none" href="#">Contacts</a>
+        <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+          <%= link_to 'About us', 'pages/about', class: "me-3 py-2 text-dark text-decoration-none" %>
+          <%= link_to 'Articles', articles_path, class: "me-3 py-2 text-dark text-decoration-none" %>
+          <%= link_to 'Contacts', contacts_path, class: "me-3 py-2 text-dark text-decoration-none" %>
       </nav>
     </div>
 
