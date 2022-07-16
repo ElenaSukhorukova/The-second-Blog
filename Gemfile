@@ -66,6 +66,11 @@ group :development do
   # gem "spring"
 end
 
+group :prodaction do 
+  gem 'pg', '0.17.1'
+  gem 'rails_12factor', '0.0.2'
+end
+
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
