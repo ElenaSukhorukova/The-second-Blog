@@ -11,7 +11,14 @@
 		<b><%= comment.author %> said: </b><br />
 		<i><%= comment.body %></i>
 	</p>
+	<hr />
 <% end %>
+
+<p>Please 
+	<%= link_to "sign in", new_user_session_url %> or
+	<%= link_to "register", new_user_registration_url %>
+	to leave comments.
+</p>
 
 <% if user_signed_in? %>
 
@@ -31,7 +38,3 @@
 		</p>
 	<% end %>
 <% end %>
-<p>
-	<%= link_to "Return by all articles", articles_path %>
-</p>
-
