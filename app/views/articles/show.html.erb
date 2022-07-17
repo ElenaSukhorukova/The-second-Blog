@@ -14,27 +14,27 @@
 	<hr />
 <% end %>
 
-<p>Please 
-	<%= link_to "sign in", new_user_session_url %> or
-	<%= link_to "register", new_user_registration_url %>
-	to leave comments.
-</p>
-
 <% if user_signed_in? %>
 
 	<h3>Add comments</h3>
+	<div class="col-xs-12 col-sm-12 col-md-12, col-lg-12">
+		<%= form_for([@article, @article.comments.build]) do |f| %>
 
-	<%= form_for([@article, @article.comments.build]) do |f| %>
+			<%= f.hidden_field :author, value: current_user.username.capitalize %>
 
-
-		<%= f.hidden_field :author, value: current_user.username.capitalize %>
-
-		<p>
-			<%= f.label :body %><br /><br />
-			<%= f.text_area :body %>
-		</p>
-		<p>
-			<%= f.submit %>
-		</p>
+			<p>
+				<%= f.label :body, class: "form-label" %><br /><br />
+				<%= f.text_area :body, class: "form-control" %>
+			</p>
+			<p>
+				<%= f.submit 'Send comment', class: "btn btn-light" %>
+			</p>
+			<% end %>
+	</div>
+	<% else %>
+			<p>Please 
+				<%= link_to "sign in", new_user_session_url %> or
+				<%= link_to "register", new_user_registration_url %>
+				to leave comments.
+			</p>
 	<% end %>
-<% end %>
