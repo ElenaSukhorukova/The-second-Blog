@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'terms' => 'pages#terms'
   get 'about' => 'pages#about'
-
+  
   resources :articles do
     resources :comments, only: [:create]
   end
