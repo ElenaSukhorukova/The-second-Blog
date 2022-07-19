@@ -8,9 +8,16 @@ Rails.application.routes.draw do
   get 'terms' => 'pages#terms'
   get 'about' => 'pages#about'
   
+
   resources :articles do
     resources :comments, only: [:create]
   end
+
+  scope module: 'user' do
+    resources :articles, only: [:edit, :new, :destroy]
+  end
+
+  resources :articles, only: [:index, :show]
 
   resource :contacts, only: [:new, :create], path_names: { :new => '' }
 
