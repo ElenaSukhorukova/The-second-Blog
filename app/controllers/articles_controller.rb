@@ -14,10 +14,10 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
+    @user = User.find_by(id: current_user.id)
     
-    if @article.save
-      redirect_to @article
+    if @user.articles.create(article_params)
+      redirect_to @user.articles.last
     else
       render action: "new"
     end
@@ -30,10 +30,14 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
 
-    if @article.update(article_params)
-      redirect_to @article
+    if  @article.user_id == current_user.id 
+      if @article.update(article_params)
+        redirect_to @article
+      else
+        render action: "edit"
+      end
     else
-      render action: "edit"
+      @message = "You can't edit someone else's articles!"
     end
   end
 
