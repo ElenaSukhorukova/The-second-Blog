@@ -1,5 +1,7 @@
 <h2>Edit article</h2>
 
+<%= simple_format(@message) unless @message.nil? %>
+
 <div class="col-xs-12 col-sm-12 col-md-12, col-lg-12">
 	<%= form_for :article, url: article_path(@article), method: :put, data: { turbo: false } do |f| %>
 
