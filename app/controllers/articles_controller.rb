@@ -15,8 +15,10 @@ class ArticlesController < ApplicationController
 
   def create
     @user = User.find_by(id: current_user.id)
-    
-    if @user.articles.create(article_params)
+    @article = @user.articles.new(article_params)
+   
+    if @article.valid?
+      @article.save
       redirect_to @user.articles.last
     else
       render action: "new"
