@@ -13,8 +13,11 @@ class Article < ApplicationRecord
     comments.last
   end
 
-  def size_title_and_text
+  def title_length
     title.length
+  end
+
+  def text_length
     text.length
   end
 end

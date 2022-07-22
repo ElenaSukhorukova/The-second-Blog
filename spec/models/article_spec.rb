@@ -29,7 +29,6 @@ describe Article do
       article = create(:article_with_comments, user_id: user.id)
 
       #check
-      # comment = create(:comment, author: 'Somebody', body: 'Something', article_id: article.id )
 
       expect(article.last_comment.body).to eq 'comment body 3'
     end
@@ -39,8 +38,9 @@ describe Article do
     it 'is not more 140 items and 4000 items' do
       user = create(:user,  username: 'Helen',  email: 'helen@helen.com', password: 'hello123')
       article = create(:article, title: 'Something', text: 'Something', user_id: user.id)
-      expect(article.title.length).to be < 140
-      expect(article.text.length).to be < 4000
+      
+      expect(article.title_length).to be < 140
+      expect(article.text_length).to be < 4000
     end
   end
 end
