@@ -21,4 +21,17 @@ describe Article do
       expect(article.subject).to eq 'Hello'
     end
   end
+
+  describe '#last_comment' do
+    it 'returns the last comment' do
+      #create user and article with comments from this user
+      user = create(:user,  username: 'Helen',  email: 'helen@helen.com', password: 'hello123')
+      article = create(:article_with_comments, user_id: user.id)
+
+      #check
+      # comment = create(:comment, author: 'Somebody', body: 'Something', article_id: article.id )
+
+      expect(article.last_comment.body).to eq 'comment body 3'
+    end
+  end  
 end
