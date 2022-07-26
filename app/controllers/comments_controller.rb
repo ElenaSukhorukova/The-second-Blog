@@ -3,9 +3,13 @@ class CommentsController < ApplicationController
 
   def create
     @article = Article.find(params[:article_id])
-    @article.comments.create(comment_params)
+    @comment = @article.comments.build(comment_params)
 
-    redirect_to article_path(@article)
+    if @comment.valid?
+      @comment.save
+      redirect_to article_path(@article)
+    end
+
   end
 
   private

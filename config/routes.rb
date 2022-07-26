@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   
 
   resources :articles do
-    resources :comments, only: [:create]
+    resources :comments
   end
 
   scope module: 'user' do

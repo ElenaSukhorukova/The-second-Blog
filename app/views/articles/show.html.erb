@@ -18,8 +18,21 @@
 
 	<h3>Add comments</h3>
 	<div class="col-xs-12 col-sm-12 col-md-12, col-lg-12">
-		<%= form_for([@article, @article.comments.build]) do |f| %>
+		<%= form_for([@article, @comment]) do |f| %>
 
+		<%= @comment.errors.inspect %>
+			
+			<% if @comment && @comment.errors.any? %>
+				<p>
+					<ul>
+					<% @comment.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+					</ul>
+				</p>
+			<% end %>
+
+			
 			<%= f.hidden_field :author, value: current_user.username.capitalize %>
 
 			<p>

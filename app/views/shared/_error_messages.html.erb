@@ -1,0 +1,7 @@
+<% def error_message(object:) %>
+       <ul>
+      <% object.errors.full_messages.each do |msg| %>
+       <li><%= msg %></li>
+      <% end %>
+     </ul>s
+<% end %>
