@@ -35,8 +35,16 @@
 
     <% end %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>       
+    <br />
+    <br />
+
+    <% flash.each do |type, msg| %>
+      <div class="alert alert-success" role="alert">
+        <%= msg %>
+      </div>
+    <% end %>
+
+   
     <%= yield %>
   </body>
 </html>

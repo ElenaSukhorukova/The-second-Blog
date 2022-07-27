@@ -9,6 +9,7 @@ class ContactsController < ApplicationController
     if @contact.valid?
       @contact.save
       redirect_to action: "new"
+      flash[:notice] = "The message successfully send"
     else
       render action: "new"
     end
