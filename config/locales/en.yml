@@ -52,3 +52,7 @@ en:
 
   static_pages:
     about_us: "About us"
+
+  users:
+    username: '%{username}'
+    greeting_user: 'Hello, %{username}'
