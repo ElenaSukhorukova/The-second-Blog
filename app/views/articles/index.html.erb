@@ -1,8 +1,4 @@
-<h2>Our articles </h2>
-
-<% if flash[:success] %>
-  <div class="notice"><%= flash[:success] %></div>
-<% end %>
+<h2><%= t("articles.our_articles") %></h2>
 
 <hr />
 <p>
@@ -21,7 +17,7 @@
 				<% if current_user.id == article.user_id %>
 				|
 					<%= link_to "Edit", edit_article_path(article) %> |
-					<%= link_to "Destroy", article_path(article), data: { 'turbo-method': :delete, 'turbo-confirm': 'Are you sure?' } %> | 
+					<%= link_to "Destroy", article_path(article), data: { "turbo-method": :delete, "turbo-confirm": "Are you sure?" } %> | 
 				<% end %> 
 			<% end %> 
 		</p>

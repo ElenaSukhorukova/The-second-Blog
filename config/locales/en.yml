@@ -33,4 +33,22 @@ en:
   hello: "Hello world"
 
   contacts:
-    contact_us: 'Contact Us!'
+    contact_us: "Contact us"
+
+  navbar:
+    title: "My Blog"
+    about_us: "About us"
+    articles: "Articles"
+    contacts: "Contacts"
+  
+  articles:
+    edit_article: "Edit article"
+    our_articles: "Our articles"
+    new_article: "New article"
+
+  comments:
+    comments: "Comments"
+    add_comments: "Add comments"
+
+  static_pages:
+    about_us: "About us"

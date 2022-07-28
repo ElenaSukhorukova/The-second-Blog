@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BlogSecond</title>
+    <title>My Blog</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -17,13 +17,13 @@
     <header>
       <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
         <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-          <span class="fs-4">My Blog</span>
+          <span class="fs-4"><%= t("navbar.title") %></span>
         </a>
 
         <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-          <%= link_to 'About us', about_path, class: "me-3 py-2 text-dark text-decoration-none" %>
-          <%= link_to 'Articles', articles_path, class: "me-3 py-2 text-dark text-decoration-none" %>
-          <%= link_to 'Contacts', contacts_path, class: "me-3 py-2 text-dark text-decoration-none" %>
+          <%= link_to t("navbar.about_us"), about_path, class: "me-3 py-2 text-dark text-decoration-none" %>
+          <%= link_to t("navbar.articles"), articles_path, class: "me-3 py-2 text-dark text-decoration-none" %>
+          <%= link_to t("navbar.contacts"), contacts_path, class: "me-3 py-2 text-dark text-decoration-none" %>
       </nav>
     </div>
 
