@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/ffi/ffi.git
-  revision: 07a1c0c028942f786b80f48206795a8fa6b0e8f5
+  revision: e6311548e4dce7c98a54d6ab0f996e95dc413b07
   submodules: true
   specs:
     ffi (1.15.5)
@@ -77,7 +77,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     bcrypt (3.1.18)
     bindex (0.8.1)
-    bootsnap (1.12.0)
+    bootsnap (1.13.0)
       msgpack (~> 1.2)
     builder (3.2.4)
     capybara (3.37.1)
@@ -117,7 +117,7 @@ GEM
       activesupport (>= 5.0)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
-    importmap-rails (1.1.4)
+    importmap-rails (1.1.5)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
     io-console (0.5.11)
@@ -136,7 +136,7 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.16.2)
-    msgpack (1.5.3)
+    msgpack (1.5.4)
     net-imap (0.2.3)
       digest
       net-protocol
@@ -152,7 +152,7 @@ GEM
       net-protocol
       timeout
     nio4r (2.5.8)
-    nokogiri (1.13.7-x64-mingw32)
+    nokogiri (1.13.8-x64-mingw32)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (0.17.1-x64-mingw32)
@@ -235,16 +235,16 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.4)
-    stimulus-rails (1.0.4)
+    stimulus-rails (1.1.0)
       railties (>= 6.0.0)
-    strscan (3.0.3)
+    strscan (3.0.4)
     thor (1.2.1)
     timeout (0.3.0)
     turbo-rails (1.1.1)
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
       railties (>= 6.0.0)
-    tzinfo (2.0.4)
+    tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2022.1)
       tzinfo (>= 1.0.0)
